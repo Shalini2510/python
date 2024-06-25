@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details</title>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script>function postVal() {
+        var selectBox = document.getElementById('userdetail');
+        var userId = selectBox.value;
+       
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', '/userDetails', true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+       
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                var userDetails = JSON.parse(xhr.responseText);
+                var showDetails = document.getElementById('showdetails');
+                showDetails.innerHTML = "<p>Name: " + userDetails.name + "</p>" +
+                                        "<p>Email: " + userDetails.email + "</p>";
+            }
+        };
+       
+        xhr.send('userid=' + userId);
+    }
+   
+   
+    </script>
+</head>
+<body>
+    <select name="userdetail" id="userdetail" onchange="postVal()">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+    </select>
+
+
+    <h2>User Details</h2>
+    <div id="showdetails"></div>
+</body>
+</html>

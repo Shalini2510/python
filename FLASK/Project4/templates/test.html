@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function getVal(v,idx)
+        {
+            console.log(idx,v)
+        }
+        function updateArray()
+        {
+            const fruits=["apple","orange","kiwi"]
+            fruit=document.getElementById("example-2").value
+            //fruits.push(fruit) -- used to add a new element in end
+            //fruits.unshift(fruit)  // unshift used to add new element at first position
+            //fruit=fruits.pop() --> to delete an element
+            //console.log("value returned="+fruit)
+            //fruits.forEach(getVal)  -->  print each element 
+            for(let n in fruits)
+            {
+                console.log(fruits[n])
+            }
+         }
+        let getProduct = () =>
+        {
+            a=5
+            b=10
+            prod=a*b
+            document.getElementById("example-1").value=prod
+        }
+        /*
+        function getProduct()
+        {
+            a=5
+            b=10
+            prod=a*b
+            document.getElementById("example-1").value=prod
+        }
+        */
+        function showValues()
+        {
+            let length =16
+            console.log(typeof length)
+            let person ={firstName:"Bob",lastName:"Smith",
+            fullname: function()
+            {
+                return this.firstName+" "+this.lastName
+            }
+        }
+            console.log(person.firstName, person.lastName, person.fullname()) 
+        }
+    </script>
+</head>
+<body>
+    <h1>Javascript Example</h1>
+    <input type="text" name="example-2" id="example-2">
+    <!--to show values of function showValues write showValues() in onclick-->
+    <input type="button" value="Test" onclick="updateArray()">   
+</body>
+</html>

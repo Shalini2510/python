@@ -1,0 +1,3 @@
+1. first run app-login.py in one terminal 
+2. then run test.py in other terminal 
+command to run test.py ---> python test.py

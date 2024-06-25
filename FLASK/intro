@@ -1,0 +1,13 @@
+1. install flask    -->   python -m pip install flask   --- ->from cmd
+2. create app.py file
+3. create instance of flask app
+4. create route
+5. Define methods for route
+6. run the application
+
+7. to display html page from flask 
+    1. from flask import Flask, render_template
+    2. create a directory named 'templates' inside the current directory
+    3. Inside templates create html page (e.g. "hello.html")
+    4.In flask function use below line to return html page
+        return render_template("hello.html")
