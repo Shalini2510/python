@@ -1,0 +1,5 @@
+#sqlalchemy -- widely used ORM library in python
+install using cmd command -- python -m pip install sqlalchemy
+
+ORM---object relational mapping
+Allow us to create classes and methods to work with methods
