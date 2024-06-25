@@ -1,0 +1,2 @@
+Python can be used on a server to create web applications
+Python can be used alongside software to create workflows
