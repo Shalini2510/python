@@ -1,0 +1,18 @@
+json-- JavaScript Object Notation
+
+It is defacto standard for exchanging info between application to transfer data in web 
+application between server and client
+
+In python a library named json is used for working with json
+
+
+1. json.load() : it accepts a file object. To read JSON data from a file and convert it into a dictionary.
+
+2. Json.loads(): to convert JSON string to a dictionary. Sometimes we receive JSON response in string format. So to use it in our application, we need to convert JSON string into a Python dictionary.
+
+3. Json.dump(): Used for writing the Python object i.e. dict to JSON file.
+
+4. Json.dumps(): method can convert a Python object into a JSON string.
+
+
+
